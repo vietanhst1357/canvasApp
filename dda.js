@@ -12,7 +12,7 @@ function dda() {
   var x = x0,
     y = y0;
   while(!(x>x1)){
-    setTimeout(ctx.fillRect(x,y,1,1), 500);
+    setTimeout(ctx.fillRect(x,y,0,0), 500);
     x=x+1;
     y=y+m;
   }
