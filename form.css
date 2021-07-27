@@ -52,8 +52,8 @@ form .btn input{
 canvas{
   border: 1px solid white;
   right: 0;
-  height: 100vh;
-  width: calc(100% - 250px);
+  height: 1080px;
+  width: 1670px;
   border-radius: 15px;
   margin-left: 250px;
   background-color: aliceblue;
