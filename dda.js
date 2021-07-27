@@ -9,15 +9,17 @@ function dda() {
   ctx.beginPath();
   const dx = x1 - x0,
     dy = y1 - y0;
-  var m = parseFloat(dy / dx);
+  var m = dx == 0 ? 1 : parseFloat(dy / dx);
   var x = x0,
     y = y0;
   start0(x, y, m, x1);
   start1(x, y, m, x1);
+  start2(x, y, m, x1, y1);
+  start3(x, y, m, x1, y1);
 }
 
 function start0(x, y, m, x1) {
-  if (x <= x1) {
+  if (x < x1) {
     setTimeout(function () {
       ctx.moveTo(x, y);
       x = x + 1;
@@ -38,6 +40,29 @@ function start1(x, y, m, x1) {
       ctx.lineTo(x, y);
       ctx.stroke();
       start1(x, y, m, x1);
+    }, 5);
+  }
+}
+
+function start2(x, y, m, x1, y1) {
+  if ((x == x1) && (y < y1)) {
+    setTimeout(function () {
+      ctx.moveTo(x, y);
+      y = y + m;
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      start2(x, y, m, x1, y1);
+    }, 5);
+  }
+}
+function start3(x, y, m, x1, y1) {
+  if ((x == x1) && (y > y1)) {
+    setTimeout(function () {
+      ctx.moveTo(x, y);
+      y = y - m;
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      start3(x, y, m, x1, y1);
     }, 5);
   }
 }
