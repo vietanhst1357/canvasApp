@@ -49,6 +49,30 @@ form .btn input{
   padding: 3px;
   margin: 5px 0 5px 0;
 }
+form .ddainput .input-box-radius {
+  margin: 5px 0 5px 0;
+  width: 100%;
+}
+form .ddainput .input-box-radius input{
+  width: 100%;
+  height: 20px;
+  outline: none;
+  border-radius: 5px;
+  border:2px solid pink;
+}
+form .ddainput .selectColor {
+  margin: 5px 0 5px 0;
+  width: 100%;
+}
+form .ddainput .selectColor .select{
+  width: 100%;
+  height: 24px;
+  border-radius: 5px;
+  border: 2px solid pink;
+}
+.select option{
+  background-color: pink;
+}
 canvas{
   border: 1px solid white;
   right: 0;

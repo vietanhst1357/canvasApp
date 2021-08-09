@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./form.css" />
-    <title>DDA Algoritm Canvas</title>
+    <title>CanvasApp</title>
   </head>
 
   <body>
     <div class="formClass">
       <form name="form1">
+        <!-- ddaAlgorithm -->
         <span>DDA Algorithm</span>
         <div class="ddainput">
           <div class="input-box">
@@ -28,6 +29,33 @@
         </div>
         <div class="btn">
           <input type="button" value="Confirm" onclick="dda()" />
+        </div>
+        <div class="btn">
+          <input type="button" value="Reset" onclick="clearCanvas()" />
+        </div>
+        <!-- midPointAlgorithm -->
+        <span>MidPoint Algorithm</span>
+        <div class="ddainput">
+          <div class="input-box">
+            <input type="text" name="xc" placeholder="Enter x" />
+          </div>
+          <div class="input-box">
+            <input type="text" name="yc" placeholder="Enter y" />
+          </div>
+          <div class="input-box-radius">
+            <input type="text" name="rc" placeholder="Enter radius" />
+          </div>
+          <div class="selectColor">
+            <select class="select" name="color" id="">
+              <option disabled selected>Select color :</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn">
+          <input type="button" value="Confirm" onclick="midPoint()" />
         </div>
         <div class="btn">
           <input type="button" value="Reset" onclick="clearCanvas()" />
